@@ -62,4 +62,13 @@ maxnum (x:xs) = if x > maxnum xs then x else maxnum xs
 
 progdin (x:xs) = dp 0 (x:xs) 0 (generarArray (maxnum (x:xs)+1) (length (x:xs))  )
 
+generarvalor y (x:xs) i = if x == 0 then 1+generarvalor (xs) else 1 - y   
+
+reconstruccion (xs:xss) i = (generarvalor xs i) : reconstruccion xss (i-1)
+
+
+
+
+
+
 
